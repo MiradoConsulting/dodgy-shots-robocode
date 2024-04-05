@@ -7,7 +7,7 @@ import robocode.*;
 /**
  * DodgyShots - a robot by (your name here)
  */
-public class DodgyShots extends Robot {
+public class DodgyShots extends AdvancedRobot {
 	int gunDirection = 1;
 	/**
 	 * run: DodgyShots's default behavior
@@ -43,6 +43,7 @@ public class DodgyShots extends Robot {
 		gunDirection = -gunDirection;
 		// Turn 360 degrees (clockwise or anti clockwise,)
 		turnGunRight(360 * gunDirection);
+		execute();
 	}
 
 	public void onHitWall(HitWallEvent e) {
