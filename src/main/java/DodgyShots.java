@@ -48,6 +48,23 @@ public class DodgyShots extends Robot {
 		execute();
 	}
 
+	public void onHitWall(HitWallEvent e) {
+		double bearing = e.getBearing(); // get the bearing of the wall
+		turnRight(-bearing); // This isn't accurate but release your robot.
+		ahead(100); // The robot goes away from the wall.
+	}
+
+	double energy = getEnergy();
+
+	public void onHitByBullet(HitByBulletEvent e) {
+		double bearing = e.getBearing(); // Get the direction which is arrived the bullet.
+		if (energy < 100) { // if the energy is low, the robot go away from the enemy
+			turnRight(-bearing); // This isn't accurate but release your robot.
+			ahead(100); // The robot goes away from the enemy.
+		} else
+			turnRight(360); // scan
+	}
+
 	/**
 	 * onHitByBullet: What to do when you're hit by a bullet
 	 */
