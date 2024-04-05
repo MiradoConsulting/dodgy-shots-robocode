@@ -1,6 +1,5 @@
-import javafx.scene.paint.Color;
 import robocode.*;
-// import java.awt.Color;
+import java.awt.Color;
 
 // API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
 
@@ -9,6 +8,7 @@ import robocode.*;
  */
 public class DodgyShots extends AdvancedRobot {
 	int gunDirection = 1;
+
 	/**
 	 * run: DodgyShots's default behavior
 	 */
@@ -17,6 +17,10 @@ public class DodgyShots extends AdvancedRobot {
 
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
+		setBodyColor(Color.black);
+		setRadarColor(Color.black);
+		setGunColor(Color.black);
+		setBulletColor(Color.orange);
 
 		// Robot main loop
 		while (true) {
