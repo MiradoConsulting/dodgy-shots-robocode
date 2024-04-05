@@ -6,7 +6,7 @@ import java.awt.Color;
 /**
  * DodgyShots - a robot by (your name here)
  */
-public class DodgyShots extends AdvancedRobot {
+public class DodgyShots extends Robot {
 	int gunDirection = 1;
 
 	/**
@@ -47,7 +47,7 @@ public class DodgyShots extends AdvancedRobot {
 		gunDirection = -gunDirection;
 		// Turn 360 degrees (clockwise or anti clockwise,)
 		turnGunRight(360 * gunDirection);
-		execute();
+		// execute();
 	}
 
 	public void onHitWall(HitWallEvent e) {
